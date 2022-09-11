@@ -1,11 +1,13 @@
 import Header from "../components/Header"
+import Content from "../components/Content"
 
 function Home() {
 
   return (
-    <main className='bg-gray-200 border-b-2 border-gray-400'>
+    <div>
       <Header />
-    </main>
+      <Content />
+    </div>
   )
 }
 
