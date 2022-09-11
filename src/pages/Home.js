@@ -1,8 +1,11 @@
-import React from 'react'
+import Header from "../components/Header"
 
 function Home() {
+
   return (
-    <div>Home</div>
+    <main className='bg-gray-200 border-b-2 border-gray-400'>
+      <Header />
+    </main>
   )
 }
 
