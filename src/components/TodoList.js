@@ -7,7 +7,6 @@ function TodoList() {
 
   const { getTodos } = useContext(TodoContext);
   const { todos } = useContext(TodoContext);
-  console.log("todos2", todos)
 
   useEffect(() => {
     getTodos()
@@ -17,7 +16,7 @@ function TodoList() {
     <ul>
       {
         todos.map((item) => (
-          <li key={item.id} className={`bg-gray-200 border-2 my-4 py-2`}>
+          <li key={item.id} className={`bg-gray-200 border-2 my-2 py-2`}>
             <div className='flex items-center justify-between'>
               <button className='cursor-pointer hover:scale-110 mx-2'>
                 {item.isCompleted ? <BsCheck size={24} /> : <BsCheck2All size={24} className='' />}
