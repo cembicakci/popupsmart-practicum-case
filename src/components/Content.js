@@ -3,7 +3,7 @@ import TodoList from './TodoList'
 
 function Content() {
   return (
-    <section>
+    <section className='max-w-[900px] mx-auto'>
         
         <TodoList />
     </section>
