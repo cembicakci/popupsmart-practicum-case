@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../context/AuthContext'
+import { MdDarkMode } from 'react-icons/md'
 
 function Header() {
 
@@ -9,6 +10,10 @@ function Header() {
     function handleClick() {
         localStorage.removeItem('name')
         navigate('/login');
+    }
+
+    function handleDarkMode(){
+        console.log("Clicked")
     }
 
     return (
@@ -20,7 +25,12 @@ function Header() {
                         <small className='italic'>Hope you are doing great today!</small>
                     </div>
 
-                    <button className='px-4 py-2 inline-block bg-red-600 text-white rounded hover:bg-red-800 hover:transition-all' onClick={handleClick}>Logout</button>
+                    <div className='flex items-center justify-center'>
+                        <button className='mx-4' onClick={handleDarkMode}>
+                            <MdDarkMode size={30} />
+                        </button>
+                        <button className='px-4 py-2 inline-block bg-red-600 text-white rounded hover:bg-red-800 hover:transition-all' onClick={handleClick}>Logout</button>
+                    </div>
                 </div>
             </header>
         </>

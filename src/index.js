@@ -5,13 +5,16 @@ import App from './App';
 
 import { AuthProvider } from './context/AuthContext';
 import { TodoProvider } from './context/TodoContext';
+import { ThemeProvider } from './context/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AuthProvider>
       <TodoProvider>
-        <App />
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
       </TodoProvider>
     </AuthProvider>
   </React.StrictMode>
