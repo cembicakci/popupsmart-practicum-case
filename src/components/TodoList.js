@@ -34,7 +34,7 @@ function TodoList({ setTitle, setEdit }) {
     <ul>
       {
         todos.map((item) => (
-          <li key={item.id} className={`bg-gray-200 border-2 my-2 py-2`}>
+          <li key={item.id} className={`bg-gray-200 border-2 my-2 py-2 dark:bg-gray-900 dark:text-white dark:border-none`}>
             <div className='flex items-center justify-between'>
               <button className='cursor-pointer hover:scale-110 mx-2' onClick={() => handleCheck(item)}>
                 {item.isCompleted ? <BsCheck size={24} /> : <BsCheck2All size={24} className='text-red-400' />}
