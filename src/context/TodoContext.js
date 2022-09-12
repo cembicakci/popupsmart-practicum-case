@@ -8,11 +8,12 @@ const API = 'https://631da7ad789612cd07ae1857.mockapi.io/todos'
 export const TodoProvider = ({ children }) => {
 
     const [todos, setTodos] = useState([])
-    console.log(todos);
+    const [loading, setLoading] = useState(true)
 
     const getTodos = async () => {
         const response = await axios.get(`${API}`);
         setTodos(response.data)
+        setLoading(false)
     }
 
     const addTodo = async (newTodo) => {
@@ -50,6 +51,7 @@ export const TodoProvider = ({ children }) => {
 
     const values = {
         todos,
+        loading,
         getTodos,
         addTodo,
         deleteTodo,

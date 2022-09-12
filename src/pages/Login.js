@@ -13,10 +13,14 @@ function Login() {
     function handleSumbit(e) {
         e.preventDefault();
 
+
         setName(user)
         if (name) {
             localStorage.setItem("name", name);
             navigate('/')
+            setName('');
+        }else{
+            navigate('/login')
         }
     }
 

@@ -7,8 +7,8 @@ function Header() {
     const navigate = useNavigate();
 
     function handleClick() {
-        navigate('/login');
         localStorage.removeItem('name')
+        navigate('/login');
     }
 
     return (
@@ -16,7 +16,7 @@ function Header() {
             <header className='bg-gray-200 border-b-2 border-gray-400'>
                 <div className='flex items-center justify-between max-w-[1100px] mx-auto py-4'>
                     <div>
-                        <h1 className='text-3xl'>Hello <span className='text-red-900 italic'>{localStorage.getItem('name')[0].toUpperCase() + localStorage.getItem('name').substring(1)}</span>, Welcome!</h1>
+                        <h1 className='text-2xl'>Hello <span className='text-white italic bg-gray-400 px-6 py-1'>{localStorage.getItem('name')[0].toUpperCase() + localStorage.getItem('name').substring(1)}</span>, Welcome!</h1>
                         <small className='italic'>Hope you are doing great today!</small>
                     </div>
 

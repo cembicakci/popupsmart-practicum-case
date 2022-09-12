@@ -11,10 +11,11 @@ function Content() {
   const { addTodo } = useContext(TodoContext)
   const { todos } = useContext(TodoContext)
   const { editTodo } = useContext(TodoContext)
+  const { loading } = useContext(TodoContext)
 
   function handleSubmit(e) {
     e.preventDefault();
-  
+
     if (edit) {
       editTodo({
         content: title,
@@ -36,7 +37,10 @@ function Content() {
         <input placeholder="What needs to be done?" value={title} onChange={(e) => setTitle(e.target.value)} className='w-full bg-gray-200 py-4 px-2 outline-none shadow-md mb-4' />
       </form>
       {
-        todos.length === 0 && <Loading />
+        loading && <Loading />
+      }
+      {
+        !loading && todos.length === 0 && <p>There is nothing to show at the moment.</p>
       }
       {
         <TodoList setTitle={setTitle} setEdit={setEdit} />
