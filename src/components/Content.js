@@ -6,13 +6,27 @@ import Loading from './Loading';
 function Content() {
 
   const [title, setTitle] = useState('');
+  const [edit, setEdit] = useState();
 
   const { addTodo } = useContext(TodoContext)
   const { todos } = useContext(TodoContext)
+  const { editTodo } = useContext(TodoContext)
 
   function handleSubmit(e) {
     e.preventDefault();
-    addTodo(title);
+  
+    if (edit) {
+      editTodo({
+        content: title,
+        isCompleted: edit.isCompleted,
+        id: edit.id
+
+      })
+      setEdit('')
+    } else {
+      addTodo(title);
+    }
+
     setTitle('');
   }
 
@@ -25,7 +39,7 @@ function Content() {
         todos.length === 0 && <Loading />
       }
       {
-        <TodoList />
+        <TodoList setTitle={setTitle} setEdit={setEdit} />
       }
     </section>
   )

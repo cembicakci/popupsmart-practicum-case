@@ -38,12 +38,23 @@ export const TodoProvider = ({ children }) => {
         return response;
     }
 
+    const editTodo = async (edit) => {
+        const { response } = await axios.put(`${API}/${edit.id}`, {
+            content: edit.content,
+            isCompleted: edit.isCompleted
+        })
+        getTodos();
+    
+        
+    }
+
     const values = {
         todos,
         getTodos,
         addTodo,
         deleteTodo,
-        completeTodo
+        completeTodo,
+        editTodo
     }
 
     return (
