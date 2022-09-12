@@ -18,7 +18,7 @@ export const TodoProvider = ({ children }) => {
     const addTodo = async (newTodo) => {
         const response = await axios.post(`${API}`, {
             content: newTodo,
-            isCompleted: false
+            isCompleted: true
         })
         setTodos([...todos, response.data])
     }
