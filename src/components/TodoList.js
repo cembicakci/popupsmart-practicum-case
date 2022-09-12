@@ -7,10 +7,15 @@ function TodoList() {
 
   const { getTodos } = useContext(TodoContext);
   const { todos } = useContext(TodoContext);
+  const { deleteTodo } = useContext(TodoContext);
 
   useEffect(() => {
     getTodos()
   }, [])
+
+  function handleDelete(id) {
+    deleteTodo(id)
+  }
 
   return (
     <ul>
@@ -24,7 +29,7 @@ function TodoList() {
               <label className={item.isCompleted ? '' : `line-through`}>{item.content}</label>
               <div className='flex'>
                 <button className='mx-2 hover:scale-110'><MdEdit size={24} /></button>
-                <button className='mx-2 hover:scale-110'><MdDelete size={24} /></button>
+                <button className='mx-2 hover:scale-110' onClick={() => handleDelete(item.id)}><MdDelete size={24} /></button>
               </div>
             </div>
           </li>

@@ -10,8 +10,6 @@ function Content() {
   const { addTodo } = useContext(TodoContext)
   const { todos } = useContext(TodoContext)
 
-  console.log('todos', todos)
-
   function handleSubmit(e) {
     e.preventDefault();
     addTodo(title);

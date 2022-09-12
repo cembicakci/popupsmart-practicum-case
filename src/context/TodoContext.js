@@ -23,10 +23,16 @@ export const TodoProvider = ({ children }) => {
         setTodos([...todos, response.data])
     }
 
+    const deleteTodo = async (id) => {
+        const response = await axios.delete(`${API}/${id}`)
+        getTodos();
+    }
+
     const values = {
         todos,
         getTodos,
-        addTodo
+        addTodo,
+        deleteTodo
     }
 
     return (
