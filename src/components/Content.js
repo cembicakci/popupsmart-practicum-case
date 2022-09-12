@@ -8,6 +8,8 @@ function Content() {
   const [title, setTitle] = useState('');
   const [edit, setEdit] = useState();
 
+  console.log(title)
+
   const { addTodo } = useContext(TodoContext)
   const { todos } = useContext(TodoContext)
   const { editTodo } = useContext(TodoContext)
@@ -15,6 +17,11 @@ function Content() {
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (title.length < 3) {
+      alert('Min. 3 character required.')
+      return; 
+    }
 
     if (edit) {
       editTodo({
