@@ -37,9 +37,9 @@ function Header() {
     return (
         <>
             <header className='bg-gray-200 border-b-2 border-gray-400 dark:bg-slate-800 dark:text-white'>
-                <div className='flex items-center justify-between max-w-[1100px] mx-auto py-4'>
-                    <div>
-                        <h1 className='text-2xl'>Hello <span className='text-white italic bg-gray-400 px-6 py-1 dark:bg-slate-700'>{localStorage.getItem('name')[0].toUpperCase() + localStorage.getItem('name').substring(1)}</span> Welcome!</h1>
+                <div className='md:flex md:items-center justify-between max-w-[1100px] mx-auto py-4 block text-center'>
+                    <div className='my-4'>
+                        <h1 className='md:text-2xl text-md'>Hello <span className='text-white italic bg-gray-400 px-6 py-1 dark:bg-slate-700'>{localStorage.getItem('name')[0].toUpperCase() + localStorage.getItem('name').substring(1)}</span> Welcome!</h1>
                         <small className='italic'>Hope you are doing great today!</small>
                     </div>
 
