@@ -41,14 +41,14 @@ function Content() {
   return (
     <section className='h-screen w-full dark:bg-slate-800 bg-text-white'>
       <div className='max-w-[600px] mx-auto md:py-16 py-4'>
-        <form onSubmit={handleSubmit}>
-          <input placeholder="What needs to be done?" value={title} onChange={(e) => setTitle(e.target.value)} className='w-full bg-gray-300 py-4 px-2 outline-none shadow-md mb-4 dark:bg-gray-900 dark:text-white' />
+        <form onSubmit={handleSubmit} className='text-center'>
+          <input placeholder="What needs to be done?" value={title} onChange={(e) => setTitle(e.target.value)} className='md:w-full w-80 bg-gray-300 py-4 px-2 outline-none shadow-md mb-4 dark:bg-gray-900 dark:text-white' />
         </form>
         {
           loading && <Loading />
         }
         {
-          !loading && todos.length === 0 && <p className='dark:text-white'>There is nothing to show at the moment.</p>
+          !loading && todos.length === 0 && <p className='dark:text-white text-xs md:text-base'>There is nothing to show at the moment.</p>
         }
         {
           <TodoList setTitle={setTitle} setEdit={setEdit} />
