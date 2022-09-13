@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/popupsmart-practicum-case/static/css/main.f9af209f.css",
+    "main.js": "/popupsmart-practicum-case/static/js/main.a4cf97bf.js",
+    "index.html": "/popupsmart-practicum-case/index.html",
+    "main.f9af209f.css.map": "/popupsmart-practicum-case/static/css/main.f9af209f.css.map",
+    "main.a4cf97bf.js.map": "/popupsmart-practicum-case/static/js/main.a4cf97bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9af209f.css",
+    "static/js/main.a4cf97bf.js"
+  ]
+}
