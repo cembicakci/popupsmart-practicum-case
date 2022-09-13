@@ -23,7 +23,7 @@ Live: https://cembicakci.github.io/popupsmart-practicum-case
 * Dark mode
 * Responsive
 
-## Usage
+## Usage
 ```
 npm install
 npm start
