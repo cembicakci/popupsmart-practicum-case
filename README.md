@@ -7,7 +7,7 @@ Live: https://cembicakci.github.io/popupsmart-practicum-case
 ![ss3](./img/3.png)
 
 
-## Tools
+## Tools
 * React
 * Context API
 * Tailwind Css
